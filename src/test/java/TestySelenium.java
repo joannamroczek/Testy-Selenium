@@ -53,6 +53,7 @@ public class TestySelenium {
         nazwisko.sendKeys("Mroczek");
         Thread.sleep(3000);
     }
+
     @Ignore
     @Test
     public void zaznaczCheckbox() throws InterruptedException {
@@ -85,6 +86,7 @@ public class TestySelenium {
         button.click();
         Thread.sleep(2000);
     }
+
     @Ignore
     @Test
     public void dropDown() throws InterruptedException {
@@ -97,6 +99,7 @@ public class TestySelenium {
         dropdown.selectByValue("2");
         Thread.sleep(2000);
     }
+
     @Test
     public void multipleChoice() throws InterruptedException {
         driver.get("http://output.jsbin.com/osebed/2");
@@ -109,6 +112,7 @@ public class TestySelenium {
         multipleChoice.selectByVisibleText("banana");
         Thread.sleep(3000);
     }
+
     @Test
     public void linkText() throws InterruptedException {
         driver.get("http://executeautomation.com/demosite/index.html");
@@ -119,6 +123,7 @@ public class TestySelenium {
         Thread.sleep(3000);
 
     }
+
     @Test
     public void partialLink() throws InterruptedException {
         driver.get("http://newtours.demoaut.com/index.php");
@@ -129,6 +134,7 @@ public class TestySelenium {
         Thread.sleep(2000);
 
     }
+
     @Ignore
     @Test
     public void alertAccepted() throws InterruptedException {
@@ -146,6 +152,7 @@ public class TestySelenium {
         alertElement.accept();
         Thread.sleep(3000);
     }
+
     @Test
     public void alertDismiss() throws InterruptedException {
         driver.get("http://executeautomation.com/demosite/index.html");
@@ -195,4 +202,26 @@ public class TestySelenium {
         firstName.clear();
         Thread.sleep(2000);
     }
+
+
+    @Test
+    public void googletry() throws InterruptedException {
+
+
+        driver.get("https://www.google.pl/");
+        WebElement google = driver.findElement(By.name("q"));
+        google.sendKeys("ale jaja robie w selenium");
+        Thread.sleep(2000);
+    }
+
+    @Test
+    public void szukaj() throws InterruptedException {
+
+        driver.get("https://www.google.pl/");
+        WebElement search = driver.findElement(By.name("btnK"));
+        search.click();
+    }
 }
+
+
+
